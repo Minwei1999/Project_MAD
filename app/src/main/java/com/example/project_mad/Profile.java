@@ -2,14 +2,11 @@ package com.example.project_mad;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.auth.FirebaseAuth;
-
-public class MainActivity extends AppCompatActivity {
+public class Profile extends AppCompatActivity {
     ImageButton transactionsBtn;
     ImageButton receiptBtn;
     ImageButton planningBtn;
@@ -20,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_profile);
 
-    //Image Button links
+        //Image Button links
 
         transactionsBtn = findViewById(R.id.transactionBtn);
         transactionsBtn.setOnClickListener(v->
@@ -53,14 +50,6 @@ public class MainActivity extends AppCompatActivity {
         {
             startActivity(new Intent(this,Profile.class));
         });
-    //Image button links end
-    }
-
-
-
-    public void logout (View view) {
-        FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(getApplicationContext(),Login.class));
-        finish();
+        //Image button links end
     }
 }

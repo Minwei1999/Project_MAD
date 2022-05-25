@@ -4,6 +4,26 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.2435" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2435" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/drawable/planning.xml" value="0.2435" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/drawable/profile.xml" value="0.2435" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_budget_planning.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_planning.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_receipt.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_report.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_transactions.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/fragment_planning.xml" value="0.1" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/fragment_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/fragment_receipt.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/fragment_report.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/fragment_transaction.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/fragment_transactions.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/menu/bottom_nav.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
