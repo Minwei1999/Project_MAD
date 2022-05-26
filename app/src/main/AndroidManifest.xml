@@ -12,6 +12,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_MAD">
         <activity
+            android:name=".PlanningBudgetDelete"
+            android:exported="false"
+            android:parentActivityName=".PlanningBudget"/>
+        <activity
+            android:name=".PlanningEventUpdate"
+            android:exported="false"
+            android:parentActivityName=".PlanningEvents"/>
+        <activity
+            android:name=".PlanningBudgetAdd"
+            android:exported="false"
+            android:parentActivityName=".PlanningBudget"/>
+        <activity
+            android:name=".PlanningEvents"
+            android:exported="false"
+            android:parentActivityName=".Planning" />
+        <activity
+            android:name=".PlanningBudget"
+            android:exported="false"
+            android:parentActivityName=".Planning" />
+        <activity
             android:name=".Transactions"
             android:exported="false" />
         <activity

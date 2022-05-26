@@ -12,11 +12,19 @@
         <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_planning.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_planning_budget.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_planning_budget_add.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_planning_budget_delete.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_planning_budget_edit.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_planning_event_update.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_planning_events.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_planning_recurring.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_receipt.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_report.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/activity_transactions.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/budgetlist_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/fragment_planning.xml" value="0.1" />
         <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/fragment_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Foong KH/AndroidStudioProjects/Project_MAD/app/src/main/res/layout/fragment_receipt.xml" value="0.25416666666666665" />
