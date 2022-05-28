@@ -68,6 +68,22 @@
             </intent-filter>
         </activity>
 
+        //Mw
+        <activity
+            android:name=".TransactionHome"
+            android:exported="false"
+            android:parentActivityName=".Planning" />
+
+        <activity
+            android:name=".TransactionAdd"
+            android:exported="false"
+            android:parentActivityName=".Planning" />
+
+        <activity
+            android:name=".TransactionUpdate"
+            android:exported="false"
+            android:parentActivityName=".Planning" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

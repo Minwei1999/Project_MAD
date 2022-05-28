@@ -2,6 +2,7 @@ package com.example.project_mad;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +13,9 @@ public class Transactions extends AppCompatActivity {
     ImageButton planningBtn;
     ImageButton reportBtn;
     ImageButton profileBtn;
+
+    Button addTransBtn;
+    Button viewTransBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,5 +54,21 @@ public class Transactions extends AppCompatActivity {
             startActivity(new Intent(this,Profile.class));
         });
         //Image button links end
+
+        //Button links
+        addTransBtn = findViewById(R.id.budgetBtn);
+
+        viewTransBtn = findViewById(R.id.eventsBtn);
+
+        addTransBtn.setOnClickListener(v->
+        {
+            startActivity(new Intent(this,TransactionHome.class));
+        });
+
+
+        viewTransBtn.setOnClickListener(v->
+        {
+            startActivity(new Intent(this,TransactionUpdate.class));
+        });
     }
 }
