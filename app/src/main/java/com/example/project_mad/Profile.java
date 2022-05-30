@@ -2,9 +2,12 @@ package com.example.project_mad;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Profile extends AppCompatActivity {
     ImageButton transactionsBtn;
@@ -51,5 +54,11 @@ public class Profile extends AppCompatActivity {
             startActivity(new Intent(this,Profile.class));
         });
         //Image button links end
+    }
+
+    public void logout (View view) {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(),Login.class));
+        finish();
     }
 }
