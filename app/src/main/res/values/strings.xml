@@ -12,6 +12,6 @@
     <string name="mw02_text"><font size="20">Update Transactions</font>\n\<font size="12">Update your expenses if you notice&#10;record mistakenly </font></string>
 
     //Receipt
-    <string name="camera_text"><font suze="20">Take Pictures</font>\n\<font size="12">To record your receipt.</font></string>
-    <string name="image_text"><font suze="20">Access Gallery</font>\n\<font size="12">To view and manage all of your recorded receipt.</font></string>
+    <string name="camera_text"><font size="20">Take Pictures</font>\n\<font size="12">To record your receipt.</font></string>
+    <string name="image_text"><font size="20">Access Gallery</font>\n\<font size="12">To view and manage all of your recorded receipt.</font></string>
 </resources>
