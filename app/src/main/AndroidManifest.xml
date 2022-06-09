@@ -3,7 +3,6 @@
     package="com.example.project_mad">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -18,15 +17,15 @@
         <activity
             android:name=".PlanningBudgetDelete"
             android:exported="false"
-            android:parentActivityName=".PlanningBudget"/>
+            android:parentActivityName=".PlanningBudget" />
         <activity
             android:name=".PlanningEventUpdate"
             android:exported="false"
-            android:parentActivityName=".PlanningEvents"/>
+            android:parentActivityName=".PlanningEvents" />
         <activity
             android:name=".PlanningBudgetAdd"
             android:exported="false"
-            android:parentActivityName=".PlanningBudget"/>
+            android:parentActivityName=".PlanningBudget" />
         <activity
             android:name=".PlanningEvents"
             android:exported="false"
@@ -41,8 +40,6 @@
         <activity
             android:name=".Report"
             android:exported="false" />
-
-        //Teo
         <activity
             android:name=".Receipt"
             android:exported="false" />
@@ -51,7 +48,7 @@
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.example.android.fileprovider1"
             android:exported="false"
-            android:grantUriPermissions="true" >
+            android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
@@ -84,18 +81,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        //Mw
         <activity
             android:name=".TransactionHome"
             android:exported="false"
             android:parentActivityName=".Planning" />
-
         <activity
             android:name=".TransactionAdd"
             android:exported="false"
             android:parentActivityName=".Planning" />
-
         <activity
             android:name=".TransactionUpdate"
             android:exported="false"

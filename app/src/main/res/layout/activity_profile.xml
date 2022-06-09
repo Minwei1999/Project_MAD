@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Profile">
 
+
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
@@ -15,12 +16,12 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475" />
+        app:layout_constraintVertical_bias="0.045" />
 
     <View
+        android:id="@+id/view3"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginStart="8dp"
@@ -179,5 +180,107 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/pic"
+        app:layout_constraintBottom_toTopOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.072"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        app:layout_constraintBottom_toTopOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.936" />
+
+    <LinearLayout
+        android:layout_width="397dp"
+        android:layout_height="324dp"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.47"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Username"
+            android:layout_marginBottom="10dp" >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/uname_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_user"
+                android:drawablePadding="20dp"
+                android:text="Name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="E-mail id"
+            android:layout_marginBottom="10dp" >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/email_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/mail_icon"
+                android:drawablePadding="20dp"
+                android:text="email id" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:layout_marginBottom="10dp" >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/pswd_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_lock"
+                android:drawablePadding="20dp"
+                android:text="********" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Contact"
+            android:layout_marginBottom="10dp" >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/contact_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/phone_icon"
+                android:drawablePadding="20dp"
+                android:text="Mobile number" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
