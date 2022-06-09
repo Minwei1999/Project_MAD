@@ -94,6 +94,11 @@
             android:exported="false"
             android:parentActivityName=".Planning" />
 
+        <activity
+            android:name=".TransactionAccelerometer"
+            android:exported="false"
+            android:parentActivityName=".Planning" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
