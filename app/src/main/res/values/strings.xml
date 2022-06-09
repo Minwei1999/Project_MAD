@@ -10,6 +10,7 @@
     //Transactions
     <string name="mw01_text"><font size="20">Transactions</font>\n\<font size="12">An expenses tracking platform&#10;that do the best for you</font></string>
     <string name="mw02_text"><font size="20">Update Transactions</font>\n\<font size="12">Update your expenses if you notice&#10;record mistakenly </font></string>
+    <string name="mw03_text"><font size="20">Accelerometer</font>\n\<font size="12">X, Y, Z values</font></string>
 
     //Receipt
     <string name="camera_text"><font size="20">Take Pictures</font>\n\<font size="12">To record your receipt.</font></string>

@@ -16,6 +16,7 @@ public class Transactions extends AppCompatActivity {
 
     Button addTransBtn;
     Button viewTransBtn;
+    Button acclerometerBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +61,8 @@ public class Transactions extends AppCompatActivity {
 
         viewTransBtn = findViewById(R.id.eventsBtn);
 
+        acclerometerBtn = findViewById(R.id.eventsBtn2);
+
         addTransBtn.setOnClickListener(v->
         {
             startActivity(new Intent(this,TransactionHome.class));
@@ -69,6 +72,11 @@ public class Transactions extends AppCompatActivity {
         viewTransBtn.setOnClickListener(v->
         {
             startActivity(new Intent(this,TransactionUpdate.class));
+        });
+
+        acclerometerBtn.setOnClickListener(v->
+        {
+            startActivity(new Intent(this,TransactionAccelerometer.class));
         });
     }
 }
