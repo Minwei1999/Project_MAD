@@ -1,11 +1,14 @@
 package com.example.project_mad;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,6 +28,7 @@ public class TransactionHome extends AppCompatActivity {
         ImageButton reportBtn;
         ImageButton profileBtn;
         ImageButton planningBtn;
+        TextView learnManage;
 
         Button addTransactionBtn;
         Button deleteTransactionBtn;
@@ -93,6 +97,17 @@ public class TransactionHome extends AppCompatActivity {
             final ArrayAdapter adapter = new ArrayAdapter<String>(this,R.layout.budgetlist_item,list);
 
             mwlistView.setAdapter(adapter);
+
+            learnManage = findViewById(R.id.textView11);
+            learnManage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String url ="https://www.google.com/search?q=learn+how+to+manage+money&sxsrf=ALiCzsZ8J8f-QA7N7fUJVCTlTemTQi33eA%3A1654775400401&source=hp&ei=aN6hYoHLFoilhwOcsp_ABQ&iflsig=AJiK0e8AAAAAYqHseFUOPmo4IxCUtSOruaLRqWrGMWcm&oq=learn+how+to+manage+mon&gs_lcp=Cgdnd3Mtd2l6EAMYADIFCAAQywEyBAgAEB4yBggAEB4QCDIGCAAQHhAIMgYIABAeEAUyBggAEB4QBTIGCAAQHhAFOgQIIxAnOgsILhCABBDHARDRAzoFCAAQgAQ6CwguEIAEEMcBEKMCOgsILhCABBDHARCvAToFCC4QgAQ6CAguEIAEENQCUABYniRg8StoAHAAeACAAbkBiAGBDpIBBDIxLjKYAQCgAQE&sclient=gws-wiz";
+                    Intent j = new Intent(Intent.ACTION_VIEW);
+                    j.setData(Uri.parse(url));
+                    startActivity(j);
+                }
+            });
 
             DatabaseReference reference= FirebaseDatabase.getInstance().getReference().child("Transaction");
             reference.addValueEventListener(new ValueEventListener() {
