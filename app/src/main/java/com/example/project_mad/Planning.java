@@ -17,6 +17,7 @@ public class Planning extends AppCompatActivity {
 
     Button budgetBtn;
     Button eventBtn;
+    Button planningGPSBtn;
 
 
     @Override
@@ -62,6 +63,8 @@ public class Planning extends AppCompatActivity {
 
         eventBtn = findViewById(R.id.eventsBtn);
 
+        planningGPSBtn = findViewById(R.id.planningGPSBtn);
+
         budgetBtn.setOnClickListener(v->
         {
             startActivity(new Intent(this,PlanningBudget.class));
@@ -71,6 +74,12 @@ public class Planning extends AppCompatActivity {
         eventBtn.setOnClickListener(v->
         {
             startActivity(new Intent(this,PlanningEvents.class));
+        });
+
+
+        planningGPSBtn.setOnClickListener(v->
+        {
+            startActivity(new Intent(this,PlanningGPS.class));
         });
 
 

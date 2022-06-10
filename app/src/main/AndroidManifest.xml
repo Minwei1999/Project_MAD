@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -14,6 +16,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_MAD">
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key"/>
+
+        <activity
+            android:name=".PlanningGPS"
+            android:exported="false"
+            android:parentActivityName=".Planning"/>
         <activity
             android:name=".PlanningBudgetDelete"
             android:exported="false"
@@ -84,20 +94,19 @@
         <activity
             android:name=".TransactionHome"
             android:exported="false"
-            android:parentActivityName=".Planning" />
+            android:parentActivityName=".Transactions" />
         <activity
             android:name=".TransactionAdd"
             android:exported="false"
-            android:parentActivityName=".Planning" />
+            android:parentActivityName=".Transactions" />
         <activity
             android:name=".TransactionUpdate"
             android:exported="false"
-            android:parentActivityName=".Planning" />
-
+            android:parentActivityName=".Transactions" />
         <activity
             android:name=".TransactionAccelerometer"
             android:exported="false"
-            android:parentActivityName=".Planning" />
+            android:parentActivityName=".Transactions" />
 
         <meta-data
             android:name="preloaded_fonts"

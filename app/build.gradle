@@ -48,6 +48,9 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
 
+    //google maps
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+
     //teo
     implementation 'com.google.firebase:firebase-storage:20.0.1'
     implementation 'com.google.firebase:firebase-firestore:24.1.2'

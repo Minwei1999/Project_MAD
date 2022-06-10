@@ -4,6 +4,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="button_text"><font size="20">Budgets</font>\n\<font size="12">A financial plan to balance your&#10;income and expenses.</font></string>
     <string name="button_text2"><font size="20">Travelling Event</font>\n\<font size="12">Create an event to track on your spending&#10;during your time travelling.</font></string>
+    <string name="button_text3"><font size="20">Search Travel Location</font>\n\<font size="12">Search your desired travel locations &#10;on map before planning.</font></string>
     <string name="linkToPlane"><u>Book Your Flight Here</u></string>
     <string name="linkToAir"><u>Book Your Accommodation Here</u></string>
 
@@ -15,4 +16,6 @@
     //Receipt
     <string name="camera_text"><font size="20">Take Pictures</font>\n\<font size="12">To record your receipt.</font></string>
     <string name="image_text"><font size="20">Access Gallery</font>\n\<font size="12">To view and manage all of your recorded receipt.</font></string>
+
+    <string name="map_key" translatable="false">AIzaSyBcoxCw21tCNMIUgiESki4UrdTionvpT1k</string>
 </resources>
