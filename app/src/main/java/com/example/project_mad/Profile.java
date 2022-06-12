@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.textfield.TextInputLayout;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -21,7 +21,7 @@ public class Profile extends AppCompatActivity {
     ImageButton reportBtn;
     ImageButton profileBtn;
 
-    TextInputLayout username, email, password, contact;
+    TextInputEditText username, email, password, contact;
     TextView emaillabel;
     String uname, emailid, pswd, number;
 
@@ -81,9 +81,9 @@ public class Profile extends AppCompatActivity {
         pswd = intent.getStringExtra("passwordLogin");
         number = intent.getStringExtra("phoneNumRegister");
 
-        email.getEditText().setText(emailid);
-        password.getEditText().setText(pswd);
-        contact.getEditText().setText(number);
+        email.setText(emailid);
+        password.setText(pswd);
+        contact.setText(number);
 
 
     }
@@ -99,9 +99,9 @@ public class Profile extends AppCompatActivity {
     }
 
     private boolean isNameChanged() {
-        if (!uname.equals(username.getEditText().getText().toString())){
-            reference.child(uname).child("name").setValue(username.getEditText().getText().toString());
-            uname=username.getEditText().getText().toString();
+        if (!uname.equals(username.getText().toString())){
+            reference.child(uname).child("name").setValue(username.getText().toString());
+            uname=username.getText().toString();
             return true;
         }else{
             return false;
@@ -110,9 +110,9 @@ public class Profile extends AppCompatActivity {
     }
 
     private boolean isPasswordChanged(){
-        if(!pswd.equals(password.getEditText().getText().toString())){
-            reference.child(emailid).child("password").setValue(password.getEditText().getText().toString());
-            pswd=password.getEditText().getText().toString();
+        if(!pswd.equals(password.getText().toString())){
+            reference.child(emailid).child("password").setValue(password.getText().toString());
+            pswd=password.getText().toString();
             return true;
         }
         else{
