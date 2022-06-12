@@ -77,13 +77,15 @@ public class Profile extends AppCompatActivity {
 
     private void showAllUserData(){
         Intent intent = getIntent();
-        emailid = intent.getStringExtra("emailLogin");
-        pswd = intent.getStringExtra("passwordLogin");
-        number = intent.getStringExtra("phoneNumRegister");
+        emailid = intent.getStringExtra("email");
+        pswd = intent.getStringExtra("password");
+        number = intent.getStringExtra("number");
+        uname = intent.getStringExtra("username");
 
         email.getEditText().setText(emailid);
         password.getEditText().setText(pswd);
         contact.getEditText().setText(number);
+        username.getEditText().setText(uname);
 
 
     }
