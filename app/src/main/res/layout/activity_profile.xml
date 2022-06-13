@@ -38,7 +38,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
 
-                android:id="@+id/uname_profile"
+                android:id="@+id/uname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/icon_user"
@@ -55,7 +55,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
 
-                android:id="@+id/email_profile"
+                android:id="@+id/emailid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/mail_icon"
@@ -72,7 +72,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
 
-                android:id="@+id/pswd_profile"
+                android:id="@+id/pswd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/icon_lock"
@@ -89,7 +89,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
 
-                android:id="@+id/contact_profile"
+                android:id="@+id/number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/phone_icon"
