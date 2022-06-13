@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -25,14 +26,14 @@ public class Profile extends AppCompatActivity {
     TextView emaillabel;
     String uname, emailid, pswd, number;
 
-    DatabaseReference reference;
+    FirebaseAuth reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_main);
 
-        reference= FirebaseDatabase.getInstance().getReference("users");
+        reference= FirebaseAuth.getInstance(FirebaseApp.getInstance("users"));
 
         username = findViewById(R.id.uname_profile);
         email = findViewById(R.id.email_profile);
@@ -102,7 +103,7 @@ public class Profile extends AppCompatActivity {
 
     private boolean isNameChanged() {
         if (!uname.equals(username.getEditText().getText().toString())){
-            reference.child(uname).child("name").setValue(username.getEditText().getText().toString());
+            reference.child(uname).getCurrentUser("name").setValue(username.getEditText().getText().toString());
             uname=username.getEditText().getText().toString();
             return true;
         }else{
