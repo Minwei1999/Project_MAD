@@ -137,6 +137,7 @@ public class Profile extends AppCompatActivity {
             startActivity(new Intent(this,Profile.class));
         });
         //Image button links end
+
     }
 
 
