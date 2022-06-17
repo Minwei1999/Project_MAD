@@ -1,18 +1,28 @@
 package com.example.project_mad;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Profile extends AppCompatActivity {
     ImageButton transactionsBtn;
@@ -20,27 +30,80 @@ public class Profile extends AppCompatActivity {
     ImageButton planningBtn;
     ImageButton reportBtn;
     ImageButton profileBtn;
+    Button button2;
 
-    TextInputLayout username, email, password, contact;
-    TextView emaillabel;
-    String uname, emailid, pswd, number;
+    private FirebaseUser user;
+    private DatabaseReference reference;
 
+    private String userID;
 
-    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        reference= FirebaseDatabase.getInstance().getReference("users");
 
-        username = findViewById(R.id.uname);
-        email = findViewById(R.id.emailid);
-        password = findViewById(R.id.pswd);
-        contact = findViewById(R.id.number);
 
-        showAllUserData();
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder dialog= new AlertDialog.Builder(Profile.this);
+                dialog.setTitle("Are you sure?");
+                dialog.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        user.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if(task.isSuccessful()){
+                                    Toast.makeText(Profile.this, "Account deleted", Toast.LENGTH_LONG).show();
+
+                                    Intent intent = new Intent(Profile.this, Login.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                    startActivity(intent);
+                                }
+                                else{
+                                    Toast.makeText(Profile.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        });
+                    }
+                });
+
+
+
+            }
+        });
+
+
+        user= FirebaseAuth.getInstance().getCurrentUser();
+        reference=FirebaseDatabase.getInstance().getReference("users");
+        userID=user.getUid();
+
+        final TextView nameTextView = (TextView) findViewById(R.id.name);
+        final TextView emailTextView = (TextView) findViewById(R.id.emailAddress);
+
+        reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User userprofile = snapshot.getValue(User.class);
+
+                if(userprofile != null){
+                    String name=userprofile.name;
+                    String email=userprofile.email;
+
+                    nameTextView.setText(name);
+                    emailTextView.setText(email);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         //Image Button links
 
@@ -76,53 +139,6 @@ public class Profile extends AppCompatActivity {
         //Image button links end
     }
 
-    private void showAllUserData(){
-        Intent intent = getIntent();
-        emailid = intent.getStringExtra("email");
-        pswd = intent.getStringExtra("password");
-        number = intent.getStringExtra("number");
-        uname = intent.getStringExtra("username");
-
-        email.getEditText().setText(emailid);
-        password.getEditText().setText(pswd);
-        contact.getEditText().setText(number);
-        username.getEditText().setText(uname);
-
-
-    }
-
-    public void update(View view){
-
-        if (isNameChanged() || isPasswordChanged()){
-            Toast.makeText(this, "Data has been updated!", Toast.LENGTH_LONG).show();
-        }
-        else{
-            Toast.makeText(this, "Data has not been updated!", Toast.LENGTH_LONG).show();
-        }
-    }
-
-    private boolean isNameChanged() {
-        if (!uname.equals(username.getEditText().getText().toString())){
-            reference.child(uname).child("name").setValue(username.getEditText().getText().toString());
-            uname=username.getEditText().getText().toString();
-            return true;
-        }else{
-            return false;
-        }
-
-    }
-
-    private boolean isPasswordChanged(){
-        if(!pswd.equals(password.getEditText().getText().toString())){
-            reference.child(emailid).child("password").setValue(password.getEditText().getText().toString());
-            pswd=password.getEditText().getText().toString();
-            return true;
-        }
-        else{
-            return false;
-        }
-
-    }
 
     public void logout (View view) {
         FirebaseAuth.getInstance().signOut();

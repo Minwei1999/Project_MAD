@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Profile">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginBottom="62dp"
-        android:text="Update"
-        app:layout_constraintBottom_toTopOf="@+id/planningBtn"
-        app:layout_constraintStart_toEndOf="@+id/receiptBtn" />
-
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
@@ -114,13 +104,11 @@
         android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:layout_marginTop="31dp"
         android:layout_marginBottom="30dp"
         android:background="@android:color/darker_gray"
         app:layout_constraintBottom_toTopOf="@+id/profileBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/planningBtn"
