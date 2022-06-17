@@ -53,6 +53,10 @@
         <activity
             android:name=".Receipt"
             android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false"
+            android:parentActivityName=".Profile"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -64,9 +68,6 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity
-            android:name=".Profile"
-            android:exported="false" />
         <activity
             android:name=".Planning"
             android:exported="false" />
